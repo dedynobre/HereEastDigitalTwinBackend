@@ -1,5 +1,3 @@
-![Here East Digital Twin](images/Here_East_Digital_Twin.jpg)
-
 Here East Digital Twin Backend
 ==========================
 
