@@ -33,7 +33,9 @@ The most recent weather reading was also stored temporarily by the flow so that 
 
 ![Here East Twitter](images/HereEastTwitter.PNG)
 
-A final stream of real-time data that was integrated for this trial was provide by the 'HereEastTwitter' flow. This used the 'Twitter Stream' node to connect to Twitter's real-time streaming API and retrieve any tweets addressed to the following accounts `@HereEast`, `@noordinarypark`, `@LondonStadium`, `@LondonLegacy`, `@AMOrbit`, `@LeeValleyVP`, `@CopperBoxArena`, `@AquaticsCentre`, `@westfieldstrat`, `@Plexalcity` and associated hashtags. In this way the Digital Twin could display publicly accessible information about the site and its neighbours. As with the previous, the most recent tweet was stored temporarily by the flow so that newly connecting clients would not have to wait for new activity in the Twitter Stream before displaying information to the user.
+A final stream of contetual real-time data was provided by the 'HereEastTwitter' flow. This used the 'Twitter Stream' node to connect to Twitter's real-time streaming API and retrieve any tweets addressed to the following accounts `@HereEast`, `@noordinarypark`, `@LondonStadium`, `@LondonLegacy`, `@AMOrbit`, `@LeeValleyVP`, `@CopperBoxArena`, `@AquaticsCentre`, `@westfieldstrat`, `@Plexalcity` and associated hashtags. 
+
+Returned tweets were processed to ensure the full extended tweet was used, but also to ensure that only the public username name and publicly displayed tweet were available to client applications. In this way the Digital Twin was able to display useful and relevant information to users about the site and its neighbours. As with the previous flow, the most recent tweet was stored by the flow temporarily so that newly connecting clients would not have to wait for further activity in the Twitter Stream before displaying relevant content.
 
 # Acknowledgements
 Thanks to the [Intel Collaborative Research Institute (ICRI) for Urban IoT](http://cities.io/) for providing the Envirosensor platform.
