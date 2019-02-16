@@ -1,3 +1,5 @@
+![Here East Digital Twin](images/Here_East_Digital_Twin.jpg)
+
 Here East Digital Twin Backend
 ==========================
 
@@ -9,17 +11,17 @@ Further information about the project and its motivation can be found in the fol
 
 ## Envirosensor Aggregator
 
-![IBM Watson IoT Platform](IBM_Watson_IoT_Platform.PNG)
+![IBM Watson IoT Platform](images/IBM_Watson_IoT_Platform.PNG)
 
 The ICRI Envirosensors were registered on the IBM Watson IoT Platform which received each sensors data payload via RestAPI once every 60 seconds. Aggregated data were automatically backed up to a Cloudant database. This data would then be available for further analysis and could be examined for correlations with other available data streams. 
 
-![Envirosensor Aggregator](EnvirosensorAggregator.PNG)
+![Envirosensor Aggregator](images/EnvirosensorAggregator.PNG)
 
 A separate Node-Red flow 'EnvirosensorAggregator' was connected to the IoT platform via MQTT protocol. These sensor reading were then passed to websockets so that they could be read by client applications in near real-time. One websocket provided the data as received from the IoT Platform. A second websocket provided a semantically enriched payload which linked the sensor reading to particular functional spaces or rooms within the building to provide more contextual information with greater relevance to the building managers, occupants and visitors to the site.
 
 ## Here East Weather
 
-![Here East Weather](HereEastWeather.PNG)
+![Here East Weather](images/HereEastWeather.PNG)
 
 Further contextual information about surrounding environmental conditions was provided by the 'HereEastWeather' flow. This flow uses the 'inject' and 'wunderground' nodes to make an HTTP request to the Weather Underground weather API, centred on the coordinates of the Here East complex, once every five minutes. Timestamps were injected into the data payload and the readings were made available to client applications via a websocket. 
 
@@ -29,7 +31,7 @@ The most recent weather reading was also stored temporarily by the flow so that 
 
 ## Here East Twitter
 
-![Here East Twitter](HereEastTwitter.PNG)
+![Here East Twitter](images/HereEastTwitter.PNG)
 
 A final stream of real-time data that was integrated for this trial was provide by the 'HereEastTwitter' flow. This used the 'Twitter Stream' node to connect to Twitter's real-time streaming API and retrieve any tweets addressed to the following accounts `@HereEast, @noordinarypark,@LondonStadium,@LondonLegacy,@AMOrbit,@LeeValleyVP,@CopperBoxArena,@AquaticsCentre,@westfieldstrat,@Plexalcity` and associated hashtags. In this way the Digital Twin could display publicly accessible information about the site and its neighbours. As with the previous, the most recent tweet was stored temporarily by the flow so that newly connecting clients would not have to wait for new activity in the Twitter Stream before displaying information to the user.
 
