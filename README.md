@@ -7,9 +7,9 @@ This repository is a collection of Node-Red flows used to provide the backed for
 
 Further information about the project and its motivation can be found in the following paper:
 
-### Dawkins, O., Dennett, A., Hudson-Smith, A. (2018) Living with a Digital Twin: Operational management and engagement using IoT and Mixed Realities at UCL’s Here East Campus on the Queen Elizabeth Olympic Park. GISRUK 2018, Leicester. [[PDF]](https://www.researchgate.net/profile/Oliver_Dawkins/publication/324702983_Living_with_a_Digital_Twin_Operational_management_and_engagement_using_IoT_and_Mixed_Realities_at_UCL%27s_Here_East_Campus_on_the_Queen_Elizabeth_Olympic_Park/links/5adddd11a6fdcc29358ba112/Living-with-a-Digital-Twin-Operational-management-and-engagement-using-IoT-and-Mixed-Realities-at-UCLs-Here-East-Campus-on-the-Queen-Elizabeth-Olympic-Park.pdf)
+#### Dawkins, O., Dennett, A., Hudson-Smith, A. (2018) Living with a Digital Twin: Operational management and engagement using IoT and Mixed Realities at UCL’s Here East Campus on the Queen Elizabeth Olympic Park. GISRUK 2018, Leicester. [[PDF]](https://www.researchgate.net/profile/Oliver_Dawkins/publication/324702983_Living_with_a_Digital_Twin_Operational_management_and_engagement_using_IoT_and_Mixed_Realities_at_UCL%27s_Here_East_Campus_on_the_Queen_Elizabeth_Olympic_Park/links/5adddd11a6fdcc29358ba112/Living-with-a-Digital-Twin-Operational-management-and-engagement-using-IoT-and-Mixed-Realities-at-UCLs-Here-East-Campus-on-the-Queen-Elizabeth-Olympic-Park.pdf)
 
-## Envirosensor Aggregator
+### Envirosensor Aggregator
 
 ![IBM Watson IoT Platform](images/IBM_Watson_IoT_Platform.PNG)
 
@@ -19,7 +19,7 @@ The ICRI Envirosensors were registered on the IBM Watson IoT Platform which rece
 
 A separate Node-Red flow 'EnvirosensorAggregator' was connected to the IoT platform via MQTT protocol. These sensor reading were then passed to websockets so that they could be read by client applications in near real-time. One websocket provided the data as received from the IoT Platform. A second websocket provided a semantically enriched payload which linked the sensor reading to particular functional spaces or rooms within the building to provide more contextual information with greater relevance to the building managers, occupants and visitors to the site.
 
-## Here East Weather
+### Here East Weather
 
 ![Here East Weather](images/HereEastWeather.PNG)
 
@@ -29,7 +29,7 @@ The most recent weather reading was also stored temporarily by the flow so that 
 
 **Note:** In May 2018 Weather Underground stopped distributing free API keys as a result of a decision by their parent companies The Weather Company and IBM. The API was officially restired at the end of 2018.
 
-## Here East Twitter
+### Here East Twitter
 
 ![Here East Twitter](images/HereEastTwitter.PNG)
 
